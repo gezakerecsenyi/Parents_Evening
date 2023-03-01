@@ -1,0 +1,214 @@
+$stack: 'Rockwell', 'Arial Black', serif;
+$blue: #3d69b9;
+
+body {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: $stack;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+@mixin input {
+  width: 80%;
+  padding: 10px 20px;
+  border: 4px solid $blue;
+  border-radius: 100px;
+  font-family: $stack;
+  font-size: 1rem;
+}
+
+.link-button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: $stack;
+  font-size: inherit;
+  color: $blue;
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+}
+
+.sign-in-prompt {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  height: 100vh;
+
+  input {
+    @include input;
+  }
+
+  .pw-options {
+    display: flex;
+
+    margin-top: 20px;
+
+    height: 50vh;
+    width: 90vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+      width: 30%;
+      margin-top: 10px;
+
+      border: 5px solid;
+      background: none;
+      font-size: 2rem;
+
+      &.blue {
+        color: #6969ff;
+        border-color: #6969ff;
+      }
+
+      &.red {
+        color: #ff4659;
+        border-color: #ff4659;
+      }
+
+      &.yellow {
+        color: #ffe669;
+        border-color: #ffe669;
+      }
+
+      &.orange {
+        color: #ffa252;
+        border-color: #ffa252;
+      }
+
+      &.white {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
+
+      &.green {
+        color: #8aff69;
+        border-color: #8aff69;
+      }
+    }
+  }
+
+  .options {
+    height: 50vh;
+    width: 80%;
+    overflow: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      padding: 20px 0;
+
+      border: none;
+      outline: none;
+      display: block;
+      border-bottom: 5px solid #3a3a3a;
+      background-color: transparent;
+      color: white;
+      font-family: $stack;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.home {
+  padding: 0 20px;
+
+  a, button {
+    color: white;
+    display: block;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+.students {
+  padding: 0 20px;
+
+  a {
+    color: $blue;
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+  hr {
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    border-bottom: 2px solid #3a3a3a;
+  }
+
+  input {
+    @include input;
+    padding: 5px 10px;
+    border-width: 2px;
+    width: calc(100% - 40px);
+    margin-bottom: 10px;
+  }
+
+  table {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 1.2rem;
+
+    button {
+      color: $blue;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.drinks {
+  padding: 0 20px;
+
+  a {
+    color: $blue;
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+  label {
+    display: block;
+    margin-top: 20px;
+
+    textarea, input, select {
+      @include input;
+      padding: 5px 10px;
+      border-width: 3px;
+
+      display: block;
+      margin-top: 8px;
+
+      width: calc(100% - 20px);
+      min-width: calc(100% - 20px);
+      max-width: calc(100% - 20px);
+    }
+
+    textarea {
+      border-radius: 15px;
+    }
+  }
+
+  .none {
+    text-align: center;
+    font-size: 1.5rem;
+
+    button {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+}
